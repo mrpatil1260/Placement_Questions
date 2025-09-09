@@ -1,0 +1,25 @@
+package org.javaprog.prog1;
+import java.util.*;
+
+public class PerfectSquare {
+	public static boolean isPerfectSquare(int n) {
+		if(n<0) {
+			return false;
+		}
+		int sqrt=(int)Math.sqrt(n);
+		return (sqrt*sqrt==n);
+		
+	}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the Square Number: ");
+		int n=sc.nextInt();
+		if(isPerfectSquare(n)) {
+			System.out.println(n + "is a Perfect Square");
+		}else {
+			System.out.println(n + "is not a Perfect Square");
+		}
+		sc.close();
+	}
+}
