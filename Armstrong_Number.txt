@@ -1,0 +1,30 @@
+public class Armstrong {
+	static int length(int n) {
+		int count=0;
+		while(n!=0) {
+			n/=10;
+			count++;
+			
+		}
+		return count;
+		
+	}
+
+	public static void main(String[] args) {
+		int n=153;
+		int temp=n;
+		double armstrong=0;
+		int len=length(n);
+		
+		while(temp!=0) {
+			int digit=temp%10;//3
+			armstrong+=Math.pow(digit,len);
+			temp/=10;
+			
+		}
+		if(armstrong==n) System.out.println("Armstrong number");
+		else System.out.println("not a armstrong number");
+
+	}
+
+}
